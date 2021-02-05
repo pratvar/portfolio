@@ -1,0 +1,25 @@
+@import url('https://fonts.googleapis.com/css?family=Inter');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html {
+  scroll-behavior: smooth;
+}
+body {
+  font-family: Inter, Arial, Helvetica, sans-serif;
+}
+input:focus {
+  outline: none;
+}
+
+h2 {
+  @apply text-xl sm:text-2xl lg:text-3xl;
+}
+h3 {
+  @apply text-lg sm:text-xl lg:text-2xl;
+}
+p {
+  @apply sm:text-lg lg:text-xl;
+}

@@ -3,6 +3,7 @@ module.exports = {
     title: "portfolio",
   },
   plugins: [
+    "gatsby-plugin-postcss",
     "gatsby-plugin-sharp",
     "gatsby-plugin-react-helmet",
     "gatsby-plugin-sitemap",
