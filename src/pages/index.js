@@ -65,11 +65,11 @@ const IndexPage = () => {
             <i className="fas fa-chevron-down transform group-hover:translate-y-1 transition-all duration-200"></i>
           </div>
         </section>
-        <section id='more' className='px-4 py-8 w-full bg-white'>
+        <section id='more' className='px-6 py-8 w-full bg-white'>
           <div className='max-w-screen-xl mx-auto my-16 md:my-24'>
-            <h3 className='text-center mb-4'>Here are my skills, and tools that I work with.</h3>
-            <div className='flex flex-col items-center sm:flex-row justify-between gap-6 sm:gap-8 md:gap-12 lg:gap-16 py-16 md:py-24 px-8 lg:px-16'>
-              <div className='max-w-md text-center sm:text-left sm:max-w-xs flex-shrink-0 md:flex-shrink md:max-w-2xl w-full'>
+            <h3 className='sm:text-center mb-4'>Here are my skills, and tools that I work with.</h3>
+            <div className='flex flex-col items-center sm:flex-row justify-between gap-6 sm:gap-8 md:gap-12 lg:gap-16 py-12 md:py-24 px-2 sm:px-8 lg:px-16'>
+              <div className='max-w-md sm:max-w-xs flex-shrink-0 md:flex-shrink md:max-w-2xl w-full'>
                 <h2 className='mb-2 sm:mb-4 lg:mb-6'>I primarily use <span className='text-lightBlue-500'><i className="fab fa-react mr-1"></i>React</span>, <span className='text-purple-400'>Sass</span> and <span style={{ color: '#06b6d4' }}>Tailwind CSS</span></h2>
                 <p className='text-gray-500'>...while I also have experience with many other libraries and frameworks such as
                 <span className='text-black'> Gatsby</span>,
@@ -78,7 +78,7 @@ const IndexPage = () => {
                 <span className='text-black'> D3</span> and
                 <span className='text-black'> Material-UI</span>.</p>
               </div>
-              <div className='flex max-w-xs lg:max-w-sm w-full flex-wrap justify-evenly items-center gap-5 sm:gap-4 md:gap-5 md:flex-shrink-0 p-5 sm:p-4 lg:p-8 bg-gradient-to-br from-lightBlue-50 to-orange-50 rounded-xl shadow-inner'>
+              <div className='flex max-w-xs lg:max-w-sm w-full flex-wrap justify-evenly items-center gap-6 sm:gap-4 md:gap-5 md:flex-shrink-0 p-4 lg:p-8 bg-gradient-to-br from-lightBlue-50 to-orange-50 rounded-xl shadow-inner'>
                 <img className='h-8 my-1 md:h-10 md:my-2' src={react} alt="React" />
                 <img className='h-8 my-1 md:h-10 md:my-2' src={sass} alt="Sass" />
                 <img className='h-8 my-1 md:h-10 md:my-2' src={tailwind} alt="Tailwind" />
