@@ -162,19 +162,19 @@ const IndexPage = () => {
             <div className="flex w-full flex-col sm:flex-row-reverse justify-between items-center gap-6 sm:gap-12 lg:gap-16 px-2 sm:px-8 lg:px-16">
               <div className='max-w-md sm:max-w-xs flex-shrink-0 md:flex-shrink md:max-w-2xl w-full'>
                 <h2 className="mb-2 sm:mb-4 lg:mb-6">Other than HTML, CSS and JavaScript,</h2>
-                <p className="text-gray-500">I have a working knowledge of
+                <p className="text-gray-500">I also have a working knowledge of
                   <span className='text-black'> Python</span>,
                   <span className='text-black'> C++</span>, and
                   <span className='text-black'> C#</span>.
                 </p>
               </div>
               <div className='flex max-w-xs w-full flex-wrap md:flex-shrink-0 justify-evenly items-center gap-6 sm:gap-4 md:gap-5 px-9 py-6 sm:p-4 lg:p-8 bg-gradient-to-bl from-cyan-50 to-orange-50 rounded-xl shadow-inner'>
-                <img className='mx-4 sm:mx-2 h-9 my-1 md:h-11 md:my-2' src={html} alt="Figma"/>
-                <img className='mx-4 sm:mx-2 h-9 my-1 md:h-11 md:my-2' src={css} alt="VS Code"/>
-                <img className='mx-4 sm:mx-2 h-7 my-1 md:h-9 md:my-2' src={javascript} alt="Adobe XD"/>
-                <img className='mx-4 sm:mx-2 h-7 my-1 md:h-9 md:my-2' src={python} alt="Photoshop"/>
-                <img className='mx-4 sm:mx-2 h-7 my-1 md:h-9 md:my-2' src={cpp} alt="npm"/>
-                <img className='mx-4 sm:mx-2 h-8 my-1 md:h-10 md:my-2' src={csharp} alt="Git"/>
+                <img className='mx-4 sm:mx-3 h-9 my-1 md:h-11 md:my-2' src={html} alt="HTML"/>
+                <img className='mx-4 sm:mx-3 h-9 my-1 md:h-11 md:my-2' src={css} alt="CSS"/>
+                <img className='mx-4 sm:mx-3 h-7 my-1 md:h-9 md:my-2' src={javascript} alt="JavaScript"/>
+                <img className='mx-4 sm:mx-3 h-7 my-1 md:h-9 md:my-2' src={python} alt="Python"/>
+                <img className='mx-4 sm:mx-3 h-7 my-1 md:h-9 md:my-2' src={cpp} alt="C++"/>
+                <img className='mx-4 sm:mx-3 h-8 my-1 md:h-10 md:my-2' src={csharp} alt="C#"/>
               </div>
             </div>
           </div>
