@@ -14,6 +14,15 @@ import jquery from '../images/icons/jquery.svg'
 import d3 from '../images/icons/d3.svg'
 import materialui from '../images/icons/material-ui.svg'
 
+import figma from '../images/icons/figma.svg'
+import vscode from '../images/icons/vscode.svg'
+import adobexd from '../images/icons/adobexd.svg'
+import photoshop from '../images/icons/photoshop.svg'
+import npm from '../images/icons/npm.svg'
+import git from '../images/icons/git.svg'
+import webpack from '../images/icons/webpack.svg'
+
+
 const IndexPage = () => {
   return (
     <>
@@ -24,7 +33,7 @@ const IndexPage = () => {
       </Helmet>
       <Layout>
         <section id='hero' className='w-full px-4 py-4 md:py-10 bg-transparent bg-gradient-to-br from-purple-50 to-blue-50 bg-fixed bg-no-repeat'>
-          <div className="flex flex-col items-center md:flex-row max-w-xs sm:max-w-sm md:max-w-2xl lg:max-w-screen-md px-8 lg:px-10 md:gap-8 lg:gap-10 mx-auto my-12 md:my-28 lg:my-36 rounded-3xl shadow-xl bg-white">
+          <div className="flex flex-col md:flex-row max-w-xs sm:max-w-sm md:max-w-2xl lg:max-w-screen-md items-center px-8 lg:px-10 md:gap-8 lg:gap-10 mx-auto my-12 md:my-28 lg:my-36 rounded-3xl shadow-xl bg-white">
             <div className='flex flex-col gap-6 items-center transform -translate-y-5 md:-translate-y-9 w-max h-48 sm:h-60 md:h-auto'>
               <img src={profile} alt="Profile Photo" className='w-40 sm:w-48 md:w-96' />
             </div>
@@ -54,7 +63,7 @@ const IndexPage = () => {
                 </li>
                 <li>
                   <a href='#' target='_blank' rel='noreferrer'
-                    className='h-10 w-10 flex items-center justify-center rounded-full border text-gray-600 hover:bg-gray-50 hover:shadow transition-all duration-100 active:bg-gray-100'>
+                    className='h-10 w-10 flex items-center justify-center rounded-full border text-gray-700 hover:bg-gray-50 hover:shadow transition-all duration-100 active:bg-gray-100'>
                     <i className="fa fa-business-time text-lg"></i></a>
                 </li>
               </ul>
@@ -66,19 +75,24 @@ const IndexPage = () => {
           </div>
         </section>
         <section id='more' className='px-6 py-8 w-full bg-white'>
-          <div className='max-w-screen-xl mx-auto my-16 md:my-24'>
-            <h3 className='sm:text-center mb-4'>Here are my skills, and tools that I work with.</h3>
-            <div className='flex flex-col items-center sm:flex-row justify-between gap-6 sm:gap-8 md:gap-12 lg:gap-16 py-12 md:py-24 px-2 sm:px-8 lg:px-16'>
+          <div className='flex flex-col gap-16 md:gap-24 max-w-screen-xl mx-auto my-16 md:my-24'>
+            <h3 className='sm:text-center'>Here are my skills, and tools that I work with.</h3>
+            <div className='flex flex-col sm:flex-row justify-between items-center gap-6 sm:gap-12 lg:gap-16 px-2 sm:px-8 lg:px-16'>
               <div className='max-w-md sm:max-w-xs flex-shrink-0 md:flex-shrink md:max-w-2xl w-full'>
-                <h2 className='mb-2 sm:mb-4 lg:mb-6'>I primarily use <span className='text-lightBlue-500'><i className="fab fa-react mr-1"></i>React</span>, <span className='text-purple-400'>Sass</span> and <span style={{ color: '#06b6d4' }}>Tailwind CSS</span></h2>
-                <p className='text-gray-500'>...while I also have experience with many other libraries and frameworks such as
-                <span className='text-black'> Gatsby</span>,
-                <span className='text-black'> Bootstrap</span>,
-                <span className='text-black'> jQuery</span>,
-                <span className='text-black'> D3</span> and
-                <span className='text-black'> Material-UI</span>.</p>
+                <h2 className='mb-2 sm:mb-4 lg:mb-6'>I primarily use
+                  <span className='text-lightBlue-500'> <i className="fab fa-react mr-1"></i>React</span>,
+                  <span className='text-purple-400'> Sass</span> and
+                  <span className='text-teal-500'> Tailwind CSS</span>
+                </h2>
+                <p className='text-gray-500'>...while I've also worked with many other libraries and frameworks such as
+                  <span className='text-black'> Gatsby</span>,
+                  <span className='text-black'> Bootstrap</span>,
+                  <span className='text-black'> jQuery</span>,
+                  <span className='text-black'> D3</span> and
+                  <span className='text-black'> Material-UI</span>.
+                </p>
               </div>
-              <div className='flex max-w-xs lg:max-w-sm w-full flex-wrap justify-evenly items-center gap-6 sm:gap-4 md:gap-5 md:flex-shrink-0 p-4 lg:p-8 bg-gradient-to-br from-lightBlue-50 to-orange-50 rounded-xl shadow-inner'>
+              <div className='flex max-w-xs lg:max-w-sm w-full flex-wrap md:flex-shrink-0 justify-evenly items-center gap-6 sm:gap-4 md:gap-5 p-4 lg:p-8 bg-gradient-to-br from-lightBlue-50 to-orange-50 rounded-xl shadow-inner'>
                 <img className='h-8 my-1 md:h-10 md:my-2' src={react} alt="React" />
                 <img className='h-8 my-1 md:h-10 md:my-2' src={sass} alt="Sass" />
                 <img className='h-8 my-1 md:h-10 md:my-2' src={tailwind} alt="Tailwind" />
@@ -89,8 +103,23 @@ const IndexPage = () => {
                 <img className='h-6 my-1 md:h-8 md:my-2' src={d3} alt="D3" />
               </div>
             </div>
-            <div className="flex">
-              <h2 className="mb-2"></h2>
+            <div className="flex flex-col sm:flex-row-reverse justify-between items-center gap-6 sm:gap-12 lg:gap-16 px-2 sm:px-8 lg:px-16">
+              <div className='max-w-md sm:max-w-xs flex-shrink-0 md:flex-shrink md:max-w-2xl w-full'>
+                <h2 className="mb-2 sm:mb-4 lg:mb-6">I design in 
+                  <span className='text-pink-600'> <i className="fab fa-figma mr-1"></i>Figma</span>, and code in
+                  <span className='text-blue-600'> VS Code</span>.
+                </h2>
+                <p className="text-gray-500">Occasionally Adobe XD and Photoshop as well, depending on the use case. My dev tools include npm, Git and Webpack</p>
+              </div>
+              <div className='flex max-w-xs w-full flex-wrap md:flex-shrink-0 justify-evenly items-center gap-6 sm:gap-4 md:gap-5 px-8 py-4 sm:p-4 lg:p-8 bg-gradient-to-br from-green-50 to-lightBlue-50 rounded-xl shadow-inner'>
+                <img className='h-6 my-1 md:h-8 md:my-2' src={figma} alt="Figma"/>
+                <img className='h-6 my-1 md:h-8 md:my-2' src={vscode} alt="VS Code"/>
+                <img className='h-7 my-1 md:h-9 md:my-2' src={adobexd} alt="Adobe XD"/>
+                <img className='h-7 my-1 md:h-9 md:my-2' src={photoshop} alt="Photoshop"/>
+                <img className='h-6 my-1 md:h-8 md:my-2' src={npm} alt="npm"/>
+                <img className='h-7 my-1 md:h-9 md:my-2' src={git} alt="Git"/>
+                <img className='h-9 my-1 md:h-11 md:my-2' src={webpack} alt="Webpack"/>
+              </div>
             </div>
           </div>
         </section>
