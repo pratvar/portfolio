@@ -46,7 +46,7 @@ const IndexPage = () => {
         <script src="https://kit.fontawesome.com/775cd725b8.js" crossOrigin="anonymous"></script>
         <title>Pratik Var | Front-End Developer</title>
       </Helmet>
-      <Layout>
+      <Layout location='about'>
         <section id='hero' className='w-full px-4 py-4 md:py-10 bg-transparent bg-gradient-to-br from-purple-50 to-blue-50 bg-fixed bg-no-repeat shadow-inner'>
           <div className="flex flex-col md:flex-row max-w-xs sm:max-w-sm md:max-w-2xl lg:max-w-screen-md items-center px-8 lg:px-10 md:gap-8 lg:gap-10 mx-auto my-12 md:my-28 lg:my-36 rounded-3xl shadow-xl bg-white">
             <div className='flex flex-col gap-6 items-center transform -translate-y-5 md:-translate-y-9 w-max h-48 sm:h-60 md:h-auto'>
@@ -186,12 +186,12 @@ const IndexPage = () => {
           <div className='flex max-w-sm mx-auto sm:mx-0 sm:max-w-full flex-col items-center text-center p-7 md:p-8 bg-white rounded-xl shadow-lg'>
             <h3>Learn more about my workflow.</h3>
             <p className='text-gray-500'>Have a look at my projects.</p>
-            <Link to="#" className='font-bold px-4 py-2 mt-4 lg:mt-6 lg:text-xl text-white bg-blue-600 rounded-full shadow hover:shadow-lg hover:bg-blue-500 transition-all duration-200'>View projects</Link>
+            <Link to="/projects" className='font-bold px-4 py-2 mt-4 lg:mt-6 lg:text-xl text-white bg-blue-600 rounded-full shadow hover:shadow-lg hover:bg-blue-500 transition-all duration-200'>View projects</Link>
           </div>
           <div className='flex max-w-sm mx-auto sm:mx-0 sm:max-w-full flex-col items-center text-center p-7 md:p-8 bg-white rounded-xl shadow-lg'>
             <h3>Interested in working together?</h3>
             <p className='text-gray-500'>Shoot me a message!</p>
-            <Link to="#" className='font-bold px-4 py-2 mt-4 lg:mt-6 lg:text-xl text-white bg-blue-600 rounded-full shadow hover:shadow-lg hover:bg-blue-500 transition-all duration-200'>Contact me</Link>
+            <Link to="/contact" className='font-bold px-4 py-2 mt-4 lg:mt-6 lg:text-xl text-white bg-blue-600 rounded-full shadow hover:shadow-lg hover:bg-blue-500 transition-all duration-200'>Contact me</Link>
           </div>
         </section>
       </Layout>
