@@ -1,5 +1,6 @@
 import * as React from 'react'
 import { Helmet } from 'react-helmet'
+import { Link } from 'gatsby'
 import Layout from '../components/layout'
 
 import favicon from '../images/favicon.svg'
@@ -22,6 +23,7 @@ import npm from '../images/icons/npm.svg'
 import git from '../images/icons/git.svg'
 import webpack from '../images/icons/webpack.svg'
 
+import firebase from '../images/icons/firebase.svg'
 import graphql from '../images/icons/graphql.svg'
 import mongodb from '../images/icons/mongodb.svg'
 import node from '../images/icons/node.svg'
@@ -45,7 +47,7 @@ const IndexPage = () => {
         <title>Pratik Var | Front-End Developer</title>
       </Helmet>
       <Layout>
-        <section id='hero' className='w-full px-4 py-4 md:py-10 bg-transparent bg-gradient-to-br from-purple-50 to-blue-50 bg-fixed bg-no-repeat'>
+        <section id='hero' className='w-full px-4 py-4 md:py-10 bg-transparent bg-gradient-to-br from-purple-50 to-blue-50 bg-fixed bg-no-repeat shadow-inner'>
           <div className="flex flex-col md:flex-row max-w-xs sm:max-w-sm md:max-w-2xl lg:max-w-screen-md items-center px-8 lg:px-10 md:gap-8 lg:gap-10 mx-auto my-12 md:my-28 lg:my-36 rounded-3xl shadow-xl bg-white">
             <div className='flex flex-col gap-6 items-center transform -translate-y-5 md:-translate-y-9 w-max h-48 sm:h-60 md:h-auto'>
               <img src={profile} alt="Profile Photo" className='w-40 sm:w-48 md:w-96' />
@@ -89,15 +91,15 @@ const IndexPage = () => {
         </section>
         <section id='more' className='px-6 py-8 w-full bg-white'>
           <div className='flex flex-col items-center text-center sm:items-start sm:text-left gap-16 md:gap-24 max-w-screen-xl mx-auto my-16 md:my-24'>
-            <h3 className='w-max mx-auto'>Here are my skills, and tools that I work with.</h3>
+            <h3 className='sm:w-max mx-auto'>Here are my skills, and tools that I work with.</h3>
             <div className='flex w-full flex-col sm:flex-row justify-between items-center gap-6 sm:gap-12 lg:gap-16 px-2 sm:px-8 lg:px-16'>
               <div className='max-w-md sm:max-w-xs flex-shrink-0 md:flex-shrink md:max-w-2xl w-full'>
                 <h2 className='mb-2 sm:mb-4 lg:mb-6'>I primarily use
-                  <span className='text-lightBlue-500'> <i className="fab fa-react mr-1"></i>React</span>,
-                  <span className='text-purple-400'> Sass</span> and
-                  <span className='text-teal-500'> Tailwind CSS</span>
+                  <span className='text-lightBlue-800'> <i className="fab fa-react mr-1"></i>React</span>,
+                  <span className='text-purple-A700'> Sass</span> and
+                  <span className='text-teal-700'> Tailwind CSS</span>.
                 </h2>
-                <p className='text-gray-500'>and I've also worked with
+                <p className='text-gray-500'>I've also worked with
                   <span className='text-black'> Gatsby</span>, and many libraries including
                   <span className='text-black'> Bootstrap</span>,
                   <span className='text-black'> jQuery</span>,
@@ -119,10 +121,10 @@ const IndexPage = () => {
             <div className="flex w-full flex-col sm:flex-row-reverse justify-between items-center gap-6 sm:gap-12 lg:gap-16 px-2 sm:px-8 lg:px-16">
               <div className='max-w-md sm:max-w-xs flex-shrink-0 md:flex-shrink md:max-w-2xl w-full'>
                 <h2 className="mb-2 sm:mb-4 lg:mb-6">I design in 
-                  <span className='text-pink-600'> <i className="fab fa-figma mr-1"></i>Figma</span>, and code in
-                  <span className='text-blue-600'> VS Code</span>.
+                  <span className='text-pink-700'> <i className="fab fa-figma mr-1"></i>Figma</span>, and code in
+                  <span className='text-blue-700'> VS Code</span>.
                 </h2>
-                <p className="text-gray-500">I occasionally use
+                <p className="text-gray-500">For designing I use
                   <span className='text-black'> Adobe XD</span> and 
                   <span className='text-black'> Photoshop</span> as well. My dev tools include
                   <span className='text-black'> npm</span>,
@@ -142,8 +144,8 @@ const IndexPage = () => {
             </div>
             <div className='flex w-full flex-col sm:flex-row justify-between items-center gap-6 sm:gap-12 lg:gap-16 px-2 sm:px-8 lg:px-16'>
               <div className='max-w-md sm:max-w-xs flex-shrink-0 md:flex-shrink md:max-w-2xl w-full'>
-                <h2 className='mb-2 sm:mb-4 lg:mb-6'>Working with APIs</h2>
-                <p className='text-gray-500'>has made me familiar with a few back-end technologies like
+                <h2 className='mb-2 sm:mb-4 lg:mb-6'>For the back-end I use <span className='text-deepOrange-900'>Firebase</span>.</h2>
+                <p className='text-gray-500'>Working with APIs has made me familiar with a few back-end technologies like
                   <span className='text-black'> GraphQL</span>,
                   <span className='text-black'> MongoDB</span>,
                   <span className='text-black'> Node.js</span>,
@@ -151,12 +153,13 @@ const IndexPage = () => {
                   <span className='text-black'> Chai</span>.
                 </p>
               </div>
-              <div className='flex max-w-xs w-full flex-wrap md:flex-shrink-0 justify-evenly items-center gap-6 sm:gap-4 md:gap-5 px-9 py-6 sm:p-6 lg:p-8 bg-gradient-to-br from-gray-50 to-blueGrey-50 rounded-xl shadow-inner'>
-                <img className='h-8 my-1 md:h-10 md:my-2' src={graphql} alt="GraphQL" />
-                <img className='h-8 my-1 md:h-10 md:my-2' src={mongodb} alt="MongoDB" />
-                <img className='h-8 my-1 md:h-10 md:my-2' src={node} alt="Node.js" />
-                <img className='h-11 my-1 md:h-14 md:my-2' src={express} alt="Express" />
-                <img className='h-8 my-1 md:h-10 md:my-2' src={chai} alt="Chai" />
+              <div className='flex max-w-xs w-full flex-wrap md:flex-shrink-0 justify-evenly items-center gap-6 sm:gap-3 md:gap-5 px-9 py-6 sm:p-4 lg:p-8 bg-gradient-to-br from-gray-50 to-blueGrey-50 rounded-xl shadow-inner'>
+                <img className='mx-4 sm:mx-3 h-7 md:h-9 my-2' src={firebase} alt="Firebase" />
+                <img className='mx-4 sm:mx-3 h-7 md:h-9 my-2' src={graphql} alt="GraphQL" />
+                <img className='mx-4 sm:mx-3 h-7 md:h-9 my-2' src={mongodb} alt="MongoDB" />
+                <img className='mx-4 sm:mx-3 h-7 md:h-9 my-2' src={node} alt="Node.js" />
+                <img className='mx-4 sm:mx-3 h-7 md:h-9 my-2' src={express} alt="Express" />
+                <img className='mx-4 sm:mx-3 h-7 md:h-9 my-2' src={chai} alt="Chai" />
               </div>
             </div>
             <div className="flex w-full flex-col sm:flex-row-reverse justify-between items-center gap-6 sm:gap-12 lg:gap-16 px-2 sm:px-8 lg:px-16">
@@ -177,6 +180,18 @@ const IndexPage = () => {
                 <img className='mx-4 sm:mx-3 h-8 my-1 md:h-10 md:my-2' src={csharp} alt="C#"/>
               </div>
             </div>
+          </div>
+        </section>
+        <section className='flex flex-col sm:flex-row justify-center gap-8 sm:gap-6 md:gap-12 px-8 py-24 bg-gradient-to-br from-blue-50 to-teal-50 shadow-inner'>
+          <div className='flex max-w-sm mx-auto sm:mx-0 sm:max-w-full flex-col items-center text-center p-7 md:p-8 bg-white rounded-xl shadow-lg'>
+            <h3>Learn more about my workflow.</h3>
+            <p className='text-gray-500'>Have a look at my projects.</p>
+            <Link to="#" className='font-bold px-4 py-2 mt-4 lg:mt-6 lg:text-xl text-white bg-blue-600 rounded-full shadow hover:shadow-lg hover:bg-blue-500 transition-all duration-200'>View projects</Link>
+          </div>
+          <div className='flex max-w-sm mx-auto sm:mx-0 sm:max-w-full flex-col items-center text-center p-7 md:p-8 bg-white rounded-xl shadow-lg'>
+            <h3>Interested in working together?</h3>
+            <p className='text-gray-500'>Shoot me a message!</p>
+            <Link to="#" className='font-bold px-4 py-2 mt-4 lg:mt-6 lg:text-xl text-white bg-blue-600 rounded-full shadow hover:shadow-lg hover:bg-blue-500 transition-all duration-200'>Contact me</Link>
           </div>
         </section>
       </Layout>

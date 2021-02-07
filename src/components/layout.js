@@ -15,7 +15,12 @@ const Layout = ({ children }) => {
       
       <main>{children}</main>
 
-      <footer></footer>
+      <footer className=' px-6 py-8 sm:px-8 sm:py-16 md:px-14 bg-gray-50'>
+        <div className='flex flex-col-reverse items-center gap-6 sm:flex-row justify-between max-w-screen-xl mx-auto'>
+          <p className='text-gray-500'>© 2021 Pratik Var</p>
+          <p className='font-semibold'>Designed and coded by Pratik.</p>
+        </div>
+      </footer>
     </>
   )
 }
