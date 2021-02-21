@@ -1,6 +1,13 @@
 module.exports = {
   siteMetadata: {
-    title: "portfolio",
+    title: "Pratik Var | Front-End Developer",
+    description: `Hi, I'm Pratik Var, a front-end developer. I design and build websites with simple, beautiful and responsive UIs. This is my personal website and portfolio.`,
+    siteUrl: `https://pratvar.com`,
+    social: {
+      instagram: `pratvar.jpg`,
+      facebook: `pratvar.dev`,
+      twitter: `pratvar`
+    }
   },
   plugins: [
     "gatsby-plugin-postcss",
@@ -16,5 +23,11 @@ module.exports = {
       },
       __key: "images",
     },
+    {
+      resolve: 'gatsby-plugin-html-attributes',
+      options: {
+        lang: 'en'
+      }
+    }
   ],
 };
