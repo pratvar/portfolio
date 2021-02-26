@@ -1,5 +1,5 @@
 import * as React from 'react'
-import { graphql } from "gatsby"
+import { graphql } from 'gatsby'
 import Layout from '../components/layout'
 import Img from 'gatsby-image'
 import './projects.css'
@@ -11,7 +11,7 @@ const Projects = ({ data }) => {
       <Layout location='projects'>
         <section className='px-8 pb-20'>
           <div className='max-w-screen-2xl w-full mx-auto py-16'>
-            <h2 className='font-bold tracking-tight mb-10'>Recent Projects</h2>
+            <h2 className='font-semibold tracking-tight mb-10'>Recent Projects</h2>
             <div className='flex gap-28 w-full'>
               <div className='flex items-center gap-4'>
                 <div className='h-10 w-10 flex items-center justify-center rounded-full shadow-md bg-grey-50 transition-all active:bg-gray-100 hover:shadow-lg cursor-pointer'>
@@ -33,7 +33,7 @@ const Projects = ({ data }) => {
                 </div>
               </div>
               <div className='pt-10'>
-                <h2 className='font-semibold tracking-tight mb-4'>Blog Website</h2>
+                <h2 className='font-bold tracking-tight mb-4'>Blog Website</h2>
                 <p className='mb-8 max-w-lg text-gray-800'>Technologies used: Gatsby, React, Firebase, Tailwind CSS</p>
                 <a href="https://nutrafam.com" className='py-2 px-2.5 shadow bg-blue-700 rounded-lg text-white text-lg transition-all hover:bg-blue-600 active:bg-blue-800'>View</a>
               </div>

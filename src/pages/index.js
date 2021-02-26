@@ -177,8 +177,8 @@ const IndexPage = () => {
         </section>
         <section className='flex flex-col sm:flex-row justify-center gap-8 sm:gap-6 md:gap-12 px-8 py-24 bg-gradient-to-br from-blue-50 to-teal-50 shadow-inner'>
           <div className='flex max-w-sm mx-auto sm:mx-0 sm:max-w-full flex-col items-center text-center p-7 md:p-8 bg-white rounded-xl shadow-lg'>
-            <h3>Learn more about my workflow.</h3>
-            <p className='text-gray-500'>Have a look at my projects.</p>
+            <h3>Learn more about my workflow</h3>
+            <p className='text-gray-500'>Have a look at my projects</p>
             <Link to="/projects" className='font-bold px-4 py-2 mt-4 lg:mt-6 lg:text-lg text-white bg-blue-600 rounded-full shadow hover:shadow-lg hover:bg-blue-500 transition-all duration-200'>View projects</Link>
           </div>
           <div className='flex max-w-sm mx-auto sm:mx-0 sm:max-w-full flex-col items-center text-center p-7 md:p-8 bg-white rounded-xl shadow-lg'>
