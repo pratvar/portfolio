@@ -38,9 +38,9 @@ const Layout = ({ location, children }) => {
       </Helmet>
       <nav className='bg-white bg-opacity-70 fixed w-full z-50 shadow-md' style={{backdropFilter: 'saturate(180%) blur(20px)'}}>
         <ul className='flex max-w-screen-2xl w-full mx-auto justify-center md:justify-end gap-3 px-8 py-4 md:px-16 sm:text-lg'>
-          <li><Link to="/" className={`px-3.5 py-2 rounded-full hover:bg-blue-500 hover:shadow-md hover:text-white active:bg-blue-800 transition-all duration-100 ${location === 'about' && 'font-bold'}`}>About</Link></li>
-          <li><Link to="/projects" className={`px-3.5 py-2 rounded-full hover:bg-blue-500 hover:shadow-md hover:text-white active:bg-blue-800 transition-all duration-100 ${location === 'projects' && 'font-bold'}`}>Projects</Link></li>
-          <li><Link to="/contact" className={`px-3.5 py-2 rounded-full hover:bg-blue-500 hover:shadow-md hover:text-white active:bg-blue-800 transition-all duration-100 ${location === 'contact' && 'font-bold'}`}>Contact</Link></li>
+          <li><Link to="/" className={`px-3.5 py-2 rounded-full hover:bg-blue-600 hover:shadow-md hover:text-white active:bg-blue-800 transition-all duration-100 ${location === 'about' && 'font-bold'}`}>About</Link></li>
+          <li><Link to="/projects" className={`px-3.5 py-2 rounded-full hover:bg-blue-600 hover:shadow-md hover:text-white active:bg-blue-800 transition-all duration-100 ${location === 'projects' && 'font-bold'}`}>Projects</Link></li>
+          <li><Link to="/contact" className={`px-3.5 py-2 rounded-full hover:bg-blue-600 hover:shadow-md hover:text-white active:bg-blue-800 transition-all duration-100 ${location === 'contact' && 'font-bold'}`}>Contact</Link></li>
         </ul>
       </nav>
 
