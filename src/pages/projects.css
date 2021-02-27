@@ -1,22 +1,9 @@
 .project {
-  opacity: 0.5;
+  height: 300px;
+  width: 100%;
+  @apply bg-gray-200;
 }
 
-.active {
-  z-index: 10;
-}
-
-.left {
-  margin-right: -200px;
-}
-
-.right {
-  margin-left: -200px;
-}
-
-.img {
-  width: 300px;
-}
-.img-active {
+.recent-img {
   width: 650px;
 }

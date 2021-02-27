@@ -2,7 +2,8 @@ import * as React from 'react'
 import { Link } from 'gatsby'
 import Layout from '../components/layout'
 
-import profile from '../images/profile.png'
+import { graphql } from 'gatsby'
+import Img from 'gatsby-image'
 
 import react from '../images/icons/react.svg'
 import sass from '../images/icons/sass.svg'
@@ -22,7 +23,7 @@ import git from '../images/icons/git.svg'
 import webpack from '../images/icons/webpack.svg'
 
 import firebase from '../images/icons/firebase.svg'
-import graphql from '../images/icons/graphql.svg'
+import graphqlIcon from '../images/icons/graphql.svg'
 import mongodb from '../images/icons/mongodb.svg'
 import node from '../images/icons/node.svg'
 import express from '../images/icons/express.svg'
@@ -36,14 +37,16 @@ import cpp from '../images/icons/cpp.svg'
 import csharp from '../images/icons/csharp.svg'
 
 
-const IndexPage = () => {
+const IndexPage = ({ data }) => {
   return (
     <>
       <Layout location='about'>
         <section id='hero' className='w-full px-4 py-4 md:py-10 bg-transparent bg-gradient-to-br from-purple-50 to-blue-50 shadow-inner'>
           <div className="flex flex-col md:flex-row max-w-xs sm:max-w-sm md:max-w-2xl lg:max-w-screen-md items-center px-8 lg:px-10 md:gap-8 lg:gap-10 mx-auto my-12 md:my-28 lg:my-36 rounded-3xl shadow-xl bg-white">
             <div className='flex flex-col gap-6 items-center transform -translate-y-5 md:-translate-y-9 w-max h-48 sm:h-60 md:h-auto'>
-              <img src={profile} alt="profile" className='w-40 sm:w-48 md:w-96' />
+              <div className='w-40 sm:w-48 md:w-64'>
+                <Img fluid={data.file.childImageSharp.fluid} alt='profile' />
+              </div>
             </div>
             <div className="flex flex-col mb-8 md:mb-0 md:py-8 items-center md:items-start text-center md:text-left">
               {/* <p className='text-gray-800'>Hi, I'm</p> */}
@@ -151,7 +154,7 @@ const IndexPage = () => {
                 <img className='mx-4 sm:mx-3 h-7 md:h-9 my-2' src={node} alt="Node.js" />
                 <img className='mx-4 sm:mx-3 h-7 md:h-9 my-2' src={express} alt="Express" />
                 <img className='mx-4 sm:mx-3 h-7 md:h-9 my-2' src={mongodb} alt="MongoDB" />
-                <img className='mx-4 sm:mx-3 h-7 md:h-9 my-2' src={graphql} alt="GraphQL" />
+                <img className='mx-4 sm:mx-3 h-7 md:h-9 my-2' src={graphqlIcon} alt="GraphQL" />
                 <img className='mx-4 sm:mx-3 h-7 md:h-9 my-2' src={chai} alt="Chai" />
               </div>
             </div>
@@ -179,12 +182,12 @@ const IndexPage = () => {
           <div className='flex max-w-sm mx-auto sm:mx-0 sm:max-w-full flex-col items-center text-center p-7 md:p-8 bg-white rounded-xl shadow-lg'>
             <h3>Learn more about my workflow</h3>
             <p className='text-gray-500'>Have a look at my projects</p>
-            <Link to="/projects" className='font-bold px-4 py-2 mt-4 lg:mt-6 lg:text-lg text-white bg-blue-600 rounded-full shadow hover:shadow-lg hover:bg-blue-500 transition-all duration-200'>View projects</Link>
+            <Link to="/projects" className='font-bold px-4 py-2 mt-4 lg:mt-6 lg:text-lg text-white bg-blue-700 rounded-full shadow hover:shadow-lg hover:bg-blue-600 transition-all duration-200'>View projects</Link>
           </div>
           <div className='flex max-w-sm mx-auto sm:mx-0 sm:max-w-full flex-col items-center text-center p-7 md:p-8 bg-white rounded-xl shadow-lg'>
             <h3>Interested in working together?</h3>
             <p className='text-gray-500'>Shoot me a message!</p>
-            <Link to="/contact" className='font-bold px-4 py-2 mt-4 lg:mt-6 lg:text-lg text-white bg-blue-600 rounded-full shadow hover:shadow-lg hover:bg-blue-500 transition-all duration-200'>Contact me</Link>
+            <Link to="/contact" className='font-bold px-4 py-2 mt-4 lg:mt-6 lg:text-lg text-white bg-blue-700 rounded-full shadow hover:shadow-lg hover:bg-blue-600 transition-all duration-200'>Contact me</Link>
           </div>
         </section>
       </Layout>
@@ -193,3 +196,15 @@ const IndexPage = () => {
 }
 
 export default IndexPage
+
+export const query = graphql`
+  query {
+    file(relativePath: { eq: "profile.png" }) {
+      childImageSharp {
+        fluid(maxWidth: 256, quality: 100) {
+          ...GatsbyImageSharpFluid
+        }
+      }
+    }
+  }
+`
