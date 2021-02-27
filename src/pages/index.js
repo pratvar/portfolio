@@ -87,12 +87,12 @@ const IndexPage = ({ data }) => {
         </section>
         <section id='more' className='px-6 py-8 w-full bg-white'>
           <div className='flex flex-col items-center text-center sm:items-start sm:text-left gap-16 md:gap-24 max-w-screen-xl mx-auto my-16 md:my-24'>
-            <h3 className='sm:w-max mx-auto'>Here are my skills, and tools that I work with.</h3>
+            <h3 className='sm:w-max mx-auto'>Here are my skills, and the tools I use.</h3>
             <div className='flex w-full flex-col sm:flex-row justify-between items-center gap-6 sm:gap-12 lg:gap-16 px-2 sm:px-8 lg:px-16'>
               <div className='max-w-md sm:max-w-xs flex-shrink-0 md:flex-shrink md:max-w-2xl w-full'>
                 <h2 className='mb-2 sm:mb-4 lg:mb-6'>I primarily use
                   <span className='text-lightBlue-800'> <i className="fab fa-react mr-1"></i>React</span>,
-                  <span className='text-purple-A700'> Sass</span> and
+                  <span className='text-pink-700'> Sass</span> and
                   <span className='text-teal-700'> Tailwind CSS</span>.
                 </h2>
                 <p className='text-gray-500'>I've also worked with
@@ -117,7 +117,7 @@ const IndexPage = ({ data }) => {
             <div className="flex w-full flex-col sm:flex-row-reverse justify-between items-center gap-6 sm:gap-12 lg:gap-16 px-2 sm:px-8 lg:px-16">
               <div className='max-w-md sm:max-w-xs flex-shrink-0 md:flex-shrink md:max-w-2xl w-full'>
                 <h2 className="mb-2 sm:mb-4 lg:mb-6">I design in 
-                  <span className='text-pink-700'> <i className="fab fa-figma mr-1"></i>Figma</span>, and code in
+                  <span className='text-purple-700'> Figma</span>, and code in
                   <span className='text-blue-700'> VS Code</span>.
                 </h2>
                 <p className="text-gray-500">For designing I use
@@ -141,7 +141,7 @@ const IndexPage = ({ data }) => {
             <div className='flex w-full flex-col sm:flex-row justify-between items-center gap-6 sm:gap-12 lg:gap-16 px-2 sm:px-8 lg:px-16'>
               <div className='max-w-md sm:max-w-xs flex-shrink-0 md:flex-shrink md:max-w-2xl w-full'>
                 <h2 className='mb-2 sm:mb-4 lg:mb-6'>For the back-end I use <span className='text-deepOrange-900'>Firebase</span>.</h2>
-                <p className='text-gray-500'>Working with APIs has made me familiar with a few back-end technologies like
+                <p className='text-gray-500'>Working with APIs has also made me familiar with a few back-end technologies like
                   <span className='text-black'> Node.js</span>,
                   <span className='text-black'> Express</span>,
                   <span className='text-black'> MongoDB</span>,

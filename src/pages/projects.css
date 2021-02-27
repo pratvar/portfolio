@@ -1,7 +1,6 @@
 .project {
-  height: 300px;
+  height: 250px;
   width: 100%;
-  @apply bg-gray-200;
 }
 
 .recent-img {

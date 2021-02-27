@@ -21,7 +21,7 @@ const Layout = ({ location, children }) => {
         <link rel="shortcut icon" href={favicon} type="image/x-icon" />
         <script src="https://kit.fontawesome.com/775cd725b8.js" crossOrigin="anonymous"></script>
         <meta property="description" content={description} />
-        
+
         <meta property="og:type" content="website" />
         <meta property="og:url" content="https://pratvar.com" />
         <meta property="og:title" content="Pratik Var | Front-End Developer" />
@@ -36,7 +36,7 @@ const Layout = ({ location, children }) => {
         <meta property="og:image" content={image} />
 
       </Helmet>
-      <nav className='bg-white bg-opacity-70 fixed w-full z-50 shadow-md' style={{backdropFilter: 'saturate(180%) blur(20px)'}}>
+      <nav className='bg-white bg-opacity-70 fixed w-full z-50 shadow-md select-none' style={{backdropFilter: 'saturate(180%) blur(20px)'}}>
         <ul className='flex max-w-screen-2xl w-full mx-auto justify-center md:justify-end gap-3 px-8 py-4 md:px-16 sm:text-lg'>
           <li><Link to="/" className={`px-3.5 py-2 rounded-full transition-all duration-100 ${location === 'about' ? 'font-bold' : 'hover:bg-blue-600 hover:shadow-md hover:text-white active:bg-blue-800'}`}>About</Link></li>
           <li><Link to="/projects" className={`px-3.5 py-2 rounded-full transition-all duration-100 ${location === 'projects' ? 'font-bold' : 'hover:bg-blue-600 hover:shadow-md hover:text-white active:bg-blue-800'}`}>Projects</Link></li>
