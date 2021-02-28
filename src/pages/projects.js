@@ -10,13 +10,13 @@ const RecentProjects = (data) => {
 const ProjectArray = ({ type, title, certification, array }) => {
   let content;
   if (type === 'text') content = (
-    <div className='grid grid-cols-3 gap-4 py-3 mb-8'>
+    <div className='grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 py-3 mb-8'>
       {
         array.map(project => {
           return (
-            <div className='flex justify-between items-center bg-gray-50 px-4 py-2 rounded-md hover:bg-white shadow hover:shadow-md transform hover:-translate-y-0.5 transition-all duration-100'>
+            <div className='border flex justify-between items-center bg-gray-50 px-4 py-2 rounded-md hover:bg-white shadow hover:shadow-md transform hover:-translate-y-0.5 transition-all duration-100'>
               <div className="cursor-default">{project.name}</div>
-              <a href={project.link} className='hover:underline'>View <i className='fa fa-external-link text-xs'></i></a>
+              <a href={project.link} className='hover:underline ml-4 border-l-2 pl-2'>View <i className='fa fa-external-link text-xs'></i></a>
             </div>
           )
         })
@@ -24,7 +24,7 @@ const ProjectArray = ({ type, title, certification, array }) => {
     </div>
   )
   else content = (
-    <div className="grid grid-cols-5 gap-4 py-3 mb-8">
+    <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-4 py-3 mb-8">
       {
         array.map(project => {
           return (
@@ -48,8 +48,8 @@ const ProjectArray = ({ type, title, certification, array }) => {
   return (
     <div className='my-20'>
       <div className='flex items-center justify-between my-2'>
-        <h3>{title}</h3>
-        <a href={certification} className='px-2 py-1 rounded-md text-white bg-blue-700 hover:bg-blue-600 active:bg-blue-800 transition-all'>View Certification</a>
+        <h3 className='font-bold'>{title}</h3>
+        <a href={certification} className='whitespace-nowrap px-2 py-1 ml-4 rounded-md text-white bg-blue-700 hover:bg-blue-600 active:bg-blue-800 transition-all'>View Certification</a>
       </div>
       <hr />
       {content}
@@ -84,41 +84,41 @@ const Projects = ({ data }) => {
   return (
     <>
       <Layout location='projects'>
-        <section id='recent-projects' className='px-8 pb-20 bg-gradient-to-br from-lightGreen-50 to-teal-50'>
+        <section id='recent-projects' className='px-8 pb-10 sm:pb-20 bg-gradient-to-br from-lightGreen-50 to-teal-50'>
           <div className='max-w-screen-2xl w-full mx-auto py-16'>
             <h2 className='font-semibold tracking-tight mb-10'>Recent Projects</h2>
-            <div className='flex gap-28 w-full'>
+            <div className='flex flex-col lg:justify-evenly lg:flex-row items-center lg:items-start gap-4 lg:gap-8 w-full'>
               <div className='flex items-center gap-4'>
-                <div onClick={handleChange} className='h-10 w-10 flex items-center justify-center rounded-full shadow-md bg-grey-50 transition-all active:bg-gray-100 hover:shadow-lg cursor-pointer'>
+                <div onClick={handleChange} className='h-6 w-6 sm:h-10 sm:w-10 text-sm sm:text-lg flex items-center justify-center rounded-full shadow-md bg-grey-50 transition-all active:bg-gray-100 hover:shadow-lg cursor-pointer'>
                   <i className="fas fa-chevron-left"></i>
                 </div>
-                <div id='slides' className='overflow-hidden'>
+                <div id='slides'>
                   <Img fluid={data.recentProjects.edges[0].node.childImageSharp.fluid} className="-ml-4 image" />
                   <Img fluid={data.recentProjects.edges[1].node.childImageSharp.fluid} className="-ml-4 image hidden" />
                 </div>
-                <div onClick={handleChange} className='h-10 w-10 flex items-center justify-center rounded-full shadow-md bg-grey-50 transition-all active:bg-gray-100 hover:shadow-lg cursor-pointer'>
+                <div onClick={handleChange} className='h-6 w-6 sm:h-10 sm:w-10 text-sm sm:text-lg flex items-center justify-center rounded-full shadow-md bg-grey-50 transition-all active:bg-gray-100 hover:shadow-lg cursor-pointer'>
                   <i className="fas fa-chevron-right"></i>
                 </div>
               </div>
-              <div className='pt-10'>
+              <div className='pt-10 lg:pt-2 xl:pt-10'>
                 <h2 className='font-bold tracking-tight mb-4'>{recentProjects[active].title}</h2>
                 <p className='mb-8 max-w-lg text-gray-800'>{recentProjects[active].desc}</p>
                 <div className="flex">
                   {
                     recentProjects[active].link &&
-                    <a className='flex items-center py-1 px-2.5 shadow bg-blue-700 rounded-md text-lg text-white transition-all hover:bg-blue-600 active:bg-blue-800 mr-3' href={recentProjects[active].link}>View<i className='ml-2 text-sm fa fa-external-link'></i></a>
+                    <a className='flex items-center py-1 px-2.5 shadow bg-blue-700 rounded-md sm:text-lg text-white transition-all hover:bg-blue-600 active:bg-blue-800 mr-3' href={recentProjects[active].link}>View<i className='ml-2 text-xs sm:text-sm fa fa-external-link'></i></a>
                   }
-                  <a className='flex items-center py-1 px-2.5 shadow bg-gray-700 rounded-md text-lg text-white transition-all hover:bg-gray-600 active:bg-gray-800' href={recentProjects[active].source}>Source<i className='ml-2 fab fa-github'></i></a>
+                  <a className='flex items-center py-1 px-2.5 shadow bg-gray-700 rounded-md sm:text-lg text-white transition-all hover:bg-gray-600 active:bg-gray-800' href={recentProjects[active].source}>Source<i className='ml-2 fab fa-github'></i></a>
                 </div>
               </div>
             </div>
           </div>
         </section>
-        <section className='px-8 py-20'>
+        <section className='px-4 sm:px-8 py-20'>
           <div className='max-w-screen-2xl mx-auto'>
             <h2 className='font-semibold my-4'>All Projects</h2>
-            <p className='text-gray-800'>These are some of the projects I made while learning through <code><a href="https://freecodecamp.org" className='hover:underline'>freeCodeCamp<i className='transform translate-x-0.5 translate-y-0.5 mr-1 text-2xl fab fa-free-code-camp'></i></a></code>.</p>
-            <div className="py-4 px-6">
+            <p className='text-gray-800'>These are some of the projects I made while learning through <code><a href="https://freecodecamp.org" className='hover:underline whitespace-nowrap'>freeCodeCamp<i className='transform translate-x-0.5 translate-y-0.5 mr-1 text-2xl fab fa-free-code-camp'></i></a></code>.</p>
+            <div className="py-0 sm:py-4 md:px-6">
               <ProjectArray
                 title='Responsive Web Design'
                 certification='https://www.freecodecamp.org/certification/pratvar/responsive-web-design'
