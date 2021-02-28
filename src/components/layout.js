@@ -16,7 +16,7 @@ const Layout = ({ location, children }) => {
   let image = 'https://pratvar.com/images/profile.jpg'
 
   return (
-    <>
+    <div className='flex flex-col min-h-screen'>
       <Helmet title={title}>
         <link rel="shortcut icon" href={favicon} type="image/x-icon" />
         <script src="https://kit.fontawesome.com/775cd725b8.js" crossOrigin="anonymous"></script>
@@ -44,7 +44,7 @@ const Layout = ({ location, children }) => {
         </ul>
       </nav>
 
-      <main className='pt-14'>{children}</main>
+      <main className='pt-14 flex-grow w-full flex flex-col'>{children}</main>
 
       <footer className='px-6 py-8 sm:px-8 sm:py-16 md:px-14 bg-gray-50'>
         <div className='flex flex-col-reverse items-center gap-6 sm:flex-row justify-between max-w-screen-xl mx-auto'>
@@ -52,7 +52,7 @@ const Layout = ({ location, children }) => {
           <p className='font-semibold'>Designed and coded by Pratik.</p>
         </div>
       </footer>
-    </>
+    </div>
   )
 }
 
