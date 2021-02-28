@@ -39,7 +39,7 @@ import csharp from '../images/icons/csharp.svg'
 
 const IndexPage = ({ data }) => {
   return (
-    <Layout location='about'>
+    <Layout location='about' description="Hi, I'm Pratik Var, a front-end developer. I design and build websites with simple, beautiful and responsive UIs. This is my personal website and portfolio.">
       <section id='hero' className='w-full px-4 py-4 md:py-10 bg-transparent bg-gradient-to-br from-purple-50 to-blue-50 shadow-inner'>
         <div className="flex flex-col md:flex-row max-w-xs sm:max-w-sm md:max-w-2xl lg:max-w-screen-md items-center px-8 lg:px-10 md:gap-8 lg:gap-10 mx-auto my-12 md:my-28 lg:my-36 rounded-3xl shadow-xl bg-white">
           <div className='flex flex-col gap-6 items-center transform -translate-y-5 md:-translate-y-9 w-max h-48 sm:h-60 md:h-auto'>
