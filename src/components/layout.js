@@ -29,7 +29,7 @@ const Layout = ({ location, description, children }) => {
       <Helmet title={title}>
         <link rel="shortcut icon" href={favicon} type="image/x-icon" />
         <script src="https://kit.fontawesome.com/775cd725b8.js" crossOrigin="anonymous"></script>
-        <meta property="description" content={description} />
+        {description && <meta property="description" content={description} />}
 
         <meta property="og:type" content="website" />
         <meta property="og:url" content={url} />
