@@ -244,8 +244,8 @@ const Projects = ({ data }) => {
                 },
                 {
                   name: 'Treemap Diagram',
-                  link: 'https://pratvar.github.io/fCC-projects/data-visualization/treemap-diagram',
-                  source: 'https://github.com/pratvar/fCC-projects/tree/master/data-visualization/treemap-diagram',
+                  link: 'https://pratvar.github.io/fCC-projects/data-visualization/treemap',
+                  source: 'https://github.com/pratvar/fCC-projects/tree/master/data-visualization/treemap',
                   image: data.allProjects.edges.find(el => el.node.base === '15.png').node.childImageSharp.fluid,
                 },
               ]}
