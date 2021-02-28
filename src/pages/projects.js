@@ -4,9 +4,6 @@ import Layout from '../components/layout'
 import Img from 'gatsby-image'
 import './projects.css'
 
-const RecentProjects = (data) => {
-}
-
 const ProjectArray = ({ type, title, certification, array }) => {
   let content;
   if (type === 'text') content = (
@@ -89,16 +86,16 @@ const Projects = ({ data }) => {
             <h2 className='font-semibold tracking-tight mb-10'>Recent Projects</h2>
             <div className='flex flex-col lg:justify-evenly lg:flex-row items-center lg:items-start gap-4 lg:gap-8 w-full'>
               <div className='flex items-center gap-4'>
-                <div onClick={handleChange} className='h-6 w-6 sm:h-10 sm:w-10 text-sm sm:text-lg flex items-center justify-center rounded-full shadow-md bg-grey-50 transition-all active:bg-gray-100 hover:shadow-lg cursor-pointer'>
+                <button onClick={handleChange} className='focus:outline-none h-6 w-6 sm:h-10 sm:w-10 text-sm sm:text-lg flex items-center justify-center rounded-full shadow-md bg-grey-50 transition-all active:bg-gray-100 hover:shadow-lg cursor-pointer'>
                   <i className="fas fa-chevron-left"></i>
-                </div>
+                </button>
                 <div id='slides'>
                   <Img fluid={data.recentProjects.edges[0].node.childImageSharp.fluid} className="-ml-4 image" />
                   <Img fluid={data.recentProjects.edges[1].node.childImageSharp.fluid} className="-ml-4 image hidden" />
                 </div>
-                <div onClick={handleChange} className='h-6 w-6 sm:h-10 sm:w-10 text-sm sm:text-lg flex items-center justify-center rounded-full shadow-md bg-grey-50 transition-all active:bg-gray-100 hover:shadow-lg cursor-pointer'>
+                <button onClick={handleChange} className='focus:outline-none h-6 w-6 sm:h-10 sm:w-10 text-sm sm:text-lg flex items-center justify-center rounded-full shadow-md bg-grey-50 transition-all active:bg-gray-100 hover:shadow-lg cursor-pointer'>
                   <i className="fas fa-chevron-right"></i>
-                </div>
+                </button>
               </div>
               <div className='pt-10 lg:pt-2 xl:pt-10'>
                 <h2 className='font-bold tracking-tight mb-4'>{recentProjects[active].title}</h2>
@@ -127,31 +124,31 @@ const Projects = ({ data }) => {
                     name: 'Tribute Page',
                     link: 'https://pratvar.github.io/fCC-projects/html-css/tribute-page',
                     source: 'https://github.com/pratvar/fCC-projects/tree/master/html-css/tribute-page',
-                    image: data.allProjects.edges.find(el => el.node.base == '1.png').node.childImageSharp.fluid,
+                    image: data.allProjects.edges.find(el => el.node.base === '1.png').node.childImageSharp.fluid,
                   },
                   {
                     name: 'Survey Form',
                     link: 'https://pratvar.github.io/fCC-projects/html-css/survey-form',
                     source: 'https://github.com/pratvar/fCC-projects/tree/master/html-css/survey-form',
-                    image: data.allProjects.edges.find(el => el.node.base == '2.png').node.childImageSharp.fluid,
+                    image: data.allProjects.edges.find(el => el.node.base === '2.png').node.childImageSharp.fluid,
                   },
                   {
                     name: 'Product Landing Page',
                     link: 'https://pratvar.github.io/fCC-projects/html-css/product-landing-page',
                     source: 'https://github.com/pratvar/fCC-projects/tree/master/html-css/product-landing-page',
-                    image: data.allProjects.edges.find(el => el.node.base == '3.png').node.childImageSharp.fluid,
+                    image: data.allProjects.edges.find(el => el.node.base === '3.png').node.childImageSharp.fluid,
                   },
                   {
                     name: 'Technical Documentation Page',
                     link: 'https://pratvar.github.io/fCC-projects/html-css/technical-documentation-page',
                     source: 'https://github.com/pratvar/fCC-projects/tree/master/html-css/technical-documentation-page',
-                    image: data.allProjects.edges.find(el => el.node.base == '4.png').node.childImageSharp.fluid,
+                    image: data.allProjects.edges.find(el => el.node.base === '4.png').node.childImageSharp.fluid,
                   },
                   {
                     name: 'Personal Portfolio Webpage',
                     link: 'https://pratvar.github.io/fCC-projects/html-css/personal-portfolio-webpage',
                     source: 'https://github.com/pratvar/fCC-projects/tree/master/html-css/personal-portfolio-webpage',
-                    image: data.allProjects.edges.find(el => el.node.base == '5.png').node.childImageSharp.fluid,
+                    image: data.allProjects.edges.find(el => el.node.base === '5.png').node.childImageSharp.fluid,
                   },
                 ]}
               />
@@ -190,31 +187,31 @@ const Projects = ({ data }) => {
                     name: 'Random Quote Machine',
                     link: 'https://pratvar.github.io/fCC-projects/frontend-libs/random-quote',
                     source: 'https://github.com/pratvar/fCC-projects/tree/master/frontend-libs/random-quote',
-                    image: data.allProjects.edges.find(el => el.node.base == '6.png').node.childImageSharp.fluid,
+                    image: data.allProjects.edges.find(el => el.node.base === '6.png').node.childImageSharp.fluid,
                   },
                   {
                     name: 'Markdown Previewer',
                     link: 'https://pratvar.github.io/fCC-projects/frontend-libs/markdown-previewer',
                     source: 'https://github.com/pratvar/fCC-projects/tree/master/frontend-libs/markdown-previewer',
-                    image: data.allProjects.edges.find(el => el.node.base == '7.png').node.childImageSharp.fluid,
+                    image: data.allProjects.edges.find(el => el.node.base === '7.png').node.childImageSharp.fluid,
                   },
                   {
                     name: 'Drum Machine',
                     link: 'https://pratvar.github.io/fCC-projects/frontend-libs/drum-machine',
                     source: 'https://github.com/pratvar/fCC-projects/tree/master/frontend-libs/drum-machine',
-                    image: data.allProjects.edges.find(el => el.node.base == '8.png').node.childImageSharp.fluid,
+                    image: data.allProjects.edges.find(el => el.node.base === '8.png').node.childImageSharp.fluid,
                   },
                   {
                     name: 'JavaScript Calculator',
                     link: 'https://pratvar.github.io/fCC-projects/frontend-libs/js-calculator',
                     source: 'https://github.com/pratvar/fCC-projects/tree/master/frontend-libs/js-calculator',
-                    image: data.allProjects.edges.find(el => el.node.base == '9.png').node.childImageSharp.fluid,
+                    image: data.allProjects.edges.find(el => el.node.base === '9.png').node.childImageSharp.fluid,
                   },
                   {
                     name: '25 + 5 Clock',
                     link: 'https://pratvar.github.io/fCC-projects/frontend-libs/pomodoro-timer',
                     source: 'https://github.com/pratvar/fCC-projects/tree/master/frontend-libs/pomodoro-timer',
-                    image: data.allProjects.edges.find(el => el.node.base == '10.png').node.childImageSharp.fluid,
+                    image: data.allProjects.edges.find(el => el.node.base === '10.png').node.childImageSharp.fluid,
                   },
                 ]}
               />
@@ -226,31 +223,31 @@ const Projects = ({ data }) => {
                     name: 'Bar Chart',
                     link: 'https://pratvar.github.io/fCC-projects/data-visualization/bar-chart',
                     source: 'https://github.com/pratvar/fCC-projects/tree/master/data-visualization/bar-chart',
-                    image: data.allProjects.edges.find(el => el.node.base == '11.png').node.childImageSharp.fluid,
+                    image: data.allProjects.edges.find(el => el.node.base === '11.png').node.childImageSharp.fluid,
                   },
                   {
                     name: 'Scatterplot Graph',
                     link: 'https://pratvar.github.io/fCC-projects/data-visualization/scatterplot-graph',
                     source: 'https://github.com/pratvar/fCC-projects/tree/master/data-visualization/scatterplot-graph',
-                    image: data.allProjects.edges.find(el => el.node.base == '12.png').node.childImageSharp.fluid,
+                    image: data.allProjects.edges.find(el => el.node.base === '12.png').node.childImageSharp.fluid,
                   },
                   {
                     name: 'Heat Map',
                     link: 'https://pratvar.github.io/fCC-projects/data-visualization/heat-map',
                     source: 'https://github.com/pratvar/fCC-projects/tree/master/data-visualization/heat-map',
-                    image: data.allProjects.edges.find(el => el.node.base == '13.png').node.childImageSharp.fluid,
+                    image: data.allProjects.edges.find(el => el.node.base === '13.png').node.childImageSharp.fluid,
                   },
                   {
                     name: 'Choropleth Map',
                     link: 'https://pratvar.github.io/fCC-projects/data-visualization/choropleth-map',
                     source: 'https://github.com/pratvar/fCC-projects/tree/master/data-visualization/choropleth-map',
-                    image: data.allProjects.edges.find(el => el.node.base == '14.png').node.childImageSharp.fluid,
+                    image: data.allProjects.edges.find(el => el.node.base === '14.png').node.childImageSharp.fluid,
                   },
                   {
                     name: 'Treemap Diagram',
                     link: 'https://pratvar.github.io/fCC-projects/data-visualization/treemap-diagram',
                     source: 'https://github.com/pratvar/fCC-projects/tree/master/data-visualization/treemap-diagram',
-                    image: data.allProjects.edges.find(el => el.node.base == '15.png').node.childImageSharp.fluid,
+                    image: data.allProjects.edges.find(el => el.node.base === '15.png').node.childImageSharp.fluid,
                   },
                 ]}
               />

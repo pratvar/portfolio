@@ -80,10 +80,10 @@ const IndexPage = ({ data }) => {
               </ul>
             </div>
           </div>
-          <div onClick={() => { document.querySelector('#more').scrollIntoView(true) }} className="group flex flex-col items-center w-max mx-auto cursor-pointer text-blueGrey-600 hover:text-blueGrey-700">
+          <button onClick={() => { document.querySelector('#more').scrollIntoView(true) }} className="focus:outline-none group flex flex-col items-center w-max mx-auto cursor-pointer text-blueGrey-600 hover:text-blueGrey-700">
             <p className='my-0.5'>know more</p>
             <i className="fas fa-chevron-down transform group-hover:translate-y-1 transition-all duration-200"></i>
-          </div>
+          </button>
         </section>
         <section id='more' className='px-6 py-8 w-full bg-white'>
           <div className='flex flex-col items-center text-center sm:items-start sm:text-left gap-16 md:gap-24 max-w-screen-xl mx-auto my-16 md:my-24'>
