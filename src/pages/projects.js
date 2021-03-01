@@ -13,7 +13,7 @@ const ProjectArray = ({ type, title, certification, array }) => {
           return (
             <div className='border flex justify-between items-center bg-gray-50 px-4 py-2 rounded-md hover:bg-white shadow hover:shadow-md transform hover:-translate-y-0.5 transition-all duration-100'>
               <div className="cursor-default">{project.name}</div>
-              <a href={project.link} className='hover:underline ml-4 border-l-2 pl-2'>View <i className='fa fa-external-link text-xs'></i></a>
+              <a href={project.link} className='hover:underline ml-4 border-l-2 pl-2 whitespace-nowrap'>View <i className='fa fa-external-link text-xs'></i></a>
             </div>
           )
         })
