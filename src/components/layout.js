@@ -29,20 +29,20 @@ const Layout = ({ location, description, children }) => {
       <Helmet title={title}>
         <link rel="shortcut icon" href={favicon} type="image/x-icon" />
         <script src="https://kit.fontawesome.com/775cd725b8.js" crossOrigin="anonymous"></script>
-        {description && <meta property="description" content={description} />}
+        {description && <meta name="description" content={description} />}
 
-        <meta property="og:type" content="website" />
-        <meta property="og:url" content={url} />
-        <meta property="og:title" content={title} />
-        {description && <meta property="og:description" content={description} />}
-        <meta property="og:image" content={image} />
+        <meta name="og:type" content="website" />
+        <meta name="og:url" content={url} />
+        <meta name="og:title" content={title} />
+        {description && <meta name="og:description" content={description} />}
+        <meta name="og:image" content={image} />
 
-        <meta property="twitter:creator" content="@pratvar" />
-        <meta property="twitter:card" content="summary_large_image" />
-        <meta property="twitter:url" content={url} />
-        <meta property="twitter:title" content={title} />
-        {description && <meta property="twitter:description" content={description} />}
-        <meta property="og:image" content={image} />
+        <meta name="twitter:creator" content="@pratvar" />
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:url" content={url} />
+        <meta name="twitter:title" content={title} />
+        {description && <meta name="twitter:description" content={description} />}
+        <meta name="og:image" content={image} />
 
       </Helmet>
       <nav className='bg-white bg-opacity-70 fixed w-full z-50 shadow-md select-none' style={{ backdropFilter: 'saturate(180%) blur(20px)' }}>

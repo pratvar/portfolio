@@ -33,7 +33,7 @@ const ContactForm = () => {
         <label className='mb-0.5' htmlFor="email">Email</label>
         <input className='mb-4 p-2 border rounded bg-gray-50 hover:bg-white' type="email" name="email" id="email" placeholder="Email" />
         <label className='mb-0.5' htmlFor="message">Message</label>
-        <textarea className='mb-4 p-2 h-36 border rounded bg-gray-50 hover:bg-white' name="message" id="message" placeholder="Message..." />
+        <textarea className='mb-4 p-2 h-36 border rounded bg-gray-50 hover:bg-white focus:outline-none' name="message" id="message" placeholder="Message..." />
       </div>
       {status === "SUCCESS"
         ? <p>Thanks!</p>

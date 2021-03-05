@@ -57,25 +57,25 @@ const IndexPage = ({ data }) => {
             </p>
             <ul className='flex gap-2'>
               <li>
-                <a href="https://github.com/pratvar" target='_blank' rel='noreferrer'
+                <a href="https://github.com/pratvar" target='_blank' rel='noreferrer' title='Github'
                   className='h-10 w-10 flex items-center justify-center rounded-full border text-gray-700 hover:bg-gray-50 hover:shadow transition-all duration-100 active:bg-gray-100'>
                   <i className="fab fa-github text-2xl"></i></a>
               </li>
               <li>
-                <a href="https://twitter.com/pratvar" target='_blank' rel='noreferrer'
+                <a href="https://twitter.com/pratvar" target='_blank' rel='noreferrer' title='Twitter'
                   className='h-10 w-10 flex items-center justify-center rounded-full border text-blue-400 hover:bg-gray-50 hover:shadow transition-all duration-100 active:bg-gray-100'>
                   <i className="fab fa-twitter text-xl"></i></a>
               </li>
               <li>
-                <a href="https://linkedin.com/in/pratikvar" target='_blank' rel='noreferrer'
+                <a href="https://linkedin.com/in/pratikvar" target='_blank' rel='noreferrer' title='Linkedin'
                   className='h-10 w-10 flex items-center justify-center rounded-full border text-blue-700 hover:bg-gray-50 hover:shadow transition-all duration-100 active:bg-gray-100'>
                   <i className="fab fa-linkedin text-2xl"></i></a>
               </li>
-              {/* <li>
-                <a href='#' target='_blank' rel='noreferrer'
-                  className='h-10 w-10 flex items-center justify-center rounded-full border text-gray-700 hover:bg-gray-50 hover:shadow transition-all duration-100 active:bg-gray-100'>
-                  <i className="fa fa-business-time text-lg"></i></a>
-              </li> */}
+              <li>
+                <a href='/resume.pdf' target='_blank' rel='noreferrer' title='Resume'
+                  className='h-10 w-10 flex items-center justify-center rounded-full border text-blueGrey-700 hover:bg-gray-50 hover:shadow transition-all duration-100 active:bg-gray-100'>
+                  <i className="fa fa-file-alt text-lg"></i></a>
+              </li>
             </ul>
           </div>
         </div>
