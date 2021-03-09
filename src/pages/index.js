@@ -67,7 +67,7 @@ const IndexPage = ({ data }) => {
                   <i className="fab fa-twitter text-xl"></i></a>
               </li>
               <li>
-                <a href="https://linkedin.com/in/pratikvar" target='_blank' rel='noreferrer' title='Linkedin'
+                <a href="https://linkedin.com/in/pratikvar" target='_blank' rel='noreferrer' title='LinkedIn'
                   className='h-10 w-10 flex items-center justify-center rounded-full border text-blue-700 hover:bg-gray-50 hover:shadow transition-all duration-100 active:bg-gray-100'>
                   <i className="fab fa-linkedin text-2xl"></i></a>
               </li>
